@@ -40,7 +40,7 @@
     nodejs
     npm2nix
     gitFull
-    docker
+    mysql57
   ];
 
   # List services that you want to enable:
