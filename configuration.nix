@@ -40,10 +40,21 @@
     nodejs
     npm2nix
     gitFull
-    mysql57
   ];
 
   # List services that you want to enable:
+  services = {
+
+    # MySQL
+    mysql = {
+      enable = true;
+      package = pkgs.mysql;
+      extraOptions = ''
+        # This is added elsewhere
+      '';
+    };
+
+  };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
